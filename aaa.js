@@ -1,7 +1,5 @@
-const fn = function(){
-  return "abc";
-}
+const PI = 3.14
 
-const a = 456;
+console.log('aaa.js')
 
-module.exports = { a, fn };
+module.exports = { PI }
