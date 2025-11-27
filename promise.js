@@ -1,16 +1,25 @@
 const promise = new Promise(function (success, failure) {
 
-    const num = parseInt(Math.random() * 100)
-    if (num % 2 == 0) {
-        success(num)
+    let c = 0
+    let i = 0
+    while ((i = parseInt(Math.random() * 5000)) < 4990) {
+        c++
+    }
+
+    console.log(`total:${c}`)
+
+    if (i % 2 == 0) {
+        success(i)
     } else {
-        failure(num)
+        failure(i)
     }
 
 })
 
-await promise.then(function (value) {
+promise.then(function (value) {
     console.log(`${value} (even)`)
 }, function (value) {
     console.log(`${value} (odd)`)
 })
+
+console.log(`done`)
